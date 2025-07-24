@@ -17,7 +17,7 @@ interface ILoginFormProps {
 }
 
 function LoginForm({ onForgotPassword }: ILoginFormProps) {
-  const { login, isLoading, error } = useAuth();
+  const { login, isLoading } = useAuth();
 
   const {
     register: registerField,

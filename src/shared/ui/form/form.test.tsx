@@ -1,6 +1,7 @@
 import { describe, it, expect, vi } from "vitest";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+
 import { Form, useFormContext } from "./index";
 
 vi.mock("./styles.module.scss", () => ({
@@ -36,7 +37,7 @@ const TestField = ({ name, label }: { name: string; label: string }) => {
 const TestFormWithFields = ({
   onFinish,
 }: {
-  onFinish?: (data: any) => void;
+  onFinish?: (data: Record<string, unknown>) => void;
 }) => {
   return (
     <Form onFinish={onFinish}>
@@ -227,7 +228,12 @@ describe("Form", () => {
 
   describe("Form State Management", () => {
     it("tracks form state changes", async () => {
-      let formState: any;
+      let formState: {
+        errors: Record<string, unknown>;
+        isValid: boolean;
+        isDirty: boolean;
+        isSubmitting: boolean;
+      };
 
       const TestFormWithState = () => {
         const context = useFormContext();
@@ -267,7 +273,11 @@ describe("Form", () => {
     });
 
     it("updates field values through setValue", async () => {
-      let controlMethods: any;
+      let controlMethods: {
+        setValue: (name: string, value: unknown) => void;
+        getValue: (name: string) => unknown;
+        getValues: () => Record<string, unknown>;
+      };
 
       const TestFormWithControl = () => {
         const context = useFormContext();
@@ -375,7 +385,7 @@ describe("Form", () => {
 
   describe("Form Reset", () => {
     it("resets form values", async () => {
-      let resetMethod: any;
+      let resetMethod: (values?: Record<string, unknown>) => void;
 
       const TestFormWithReset = () => {
         const context = useFormContext();
@@ -420,7 +430,7 @@ describe("Form", () => {
     });
 
     it("resets with new values", async () => {
-      let resetMethod: any;
+      let resetMethod: (values?: Record<string, unknown>) => void;
 
       const TestFormWithReset = () => {
         const context = useFormContext();
@@ -461,7 +471,9 @@ describe("Form", () => {
 
   describe("Watch Functionality", () => {
     it("watches individual field values", async () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       let watchMethod: any;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       let watchedValue: any;
 
       const TestFormWithWatch = () => {
@@ -497,7 +509,9 @@ describe("Form", () => {
     });
 
     it("watches all form values", () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       let watchMethod: any;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       let allValues: any;
 
       const TestFormWithWatchAll = () => {
@@ -529,13 +543,6 @@ describe("Form", () => {
   });
 
   describe("TypeScript Generics", () => {
-    interface TestFormData {
-      [key: string]: any;
-      email: string;
-      password: string;
-      age: number;
-    }
-
     it("supports typed form data", async () => {
       const onFinish = vi.fn();
       const user = userEvent.setup();

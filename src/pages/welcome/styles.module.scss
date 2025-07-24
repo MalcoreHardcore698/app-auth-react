@@ -10,23 +10,20 @@
 .container {
   @include flex-container(column);
 
+  gap: var(--space-xl);
   width: 380px;
-
   background: var(--color-auth-white);
   border-radius: var(--border-radius-l);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  gap: var(--space-xl);
+  box-shadow: 0 10px 40px rgb(0 0 0 / 10%);
 
   .header {
     display: flex;
     flex-direction: column;
     gap: var(--space-xs);
-
     width: 100%;
-
+    padding: var(--space-m) var(--space-xl);
     text-align: left;
     border-block-end: 1px solid var(--color-border-color);
-    padding: var(--space-m) var(--space-xl);
 
     .title {
       @include text-truncate;
@@ -37,19 +34,18 @@
     }
 
     .subtitle {
-      font-size: var(--font-size-s);
-      color: var(--color-auth-text-light);
       margin: 0;
+      font-size: var(--font-size-s);
       line-height: 1.5;
+      color: var(--color-auth-text-light);
     }
   }
 
   .userInfo {
     @include flex-container(column, center, center);
 
-    width: 100%;
     gap: var(--space-l);
-
+    width: 100%;
     padding-inline: var(--space-xl);
 
     .avatar {
@@ -60,12 +56,12 @@
 
       @include flex-center;
 
-      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+      box-shadow: 0 4px 12px rgb(102 126 234 / 30%);
 
       .avatarText {
-        color: var(--color-auth-white);
         font-size: var(--space-xl);
         font-weight: var(--font-weight-xl);
+        color: var(--color-auth-white);
       }
     }
 
@@ -79,22 +75,21 @@
         @include flex-container(row, space-between, center);
 
         width: 100%;
-
         padding: var(--space-s) var(--space-m);
         background: #f7fafc;
-        border-radius: var(--border-radius-m);
         border: 1px solid #e2e8f0;
+        border-radius: var(--border-radius-m);
 
         .label {
+          font-size: var(--font-size-s);
           font-weight: var(--font-weight-l);
           color: var(--color-auth-text-muted);
-          font-size: var(--font-size-s);
         }
 
         .value {
-          color: var(--color-auth-text);
-          font-weight: var(--font-weight-l);
           font-size: var(--font-size-s);
+          font-weight: var(--font-weight-l);
+          color: var(--color-auth-text);
         }
       }
     }
@@ -104,7 +99,6 @@
     @include flex-center;
 
     width: 100%;
-
     text-align: center;
     border-block-start: 1px solid var(--color-border-color);
     padding-block: var(--space-m);

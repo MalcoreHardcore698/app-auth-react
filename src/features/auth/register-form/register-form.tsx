@@ -13,7 +13,7 @@ import { PasswordField } from "../password-field";
 import styles from "./styles.module.scss";
 
 function RegisterForm() {
-  const { error, register, isLoading } = useAuth();
+  const { register, isLoading } = useAuth();
 
   const {
     register: registerField,

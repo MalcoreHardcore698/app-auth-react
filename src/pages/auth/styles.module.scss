@@ -12,23 +12,20 @@ $header-icon-size: 56px;
 .container {
   @include flex-container(column);
 
+  gap: var(--space-xl);
   width: 380px;
-
   background: var(--color-auth-white);
   border-radius: var(--border-radius-l);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  gap: var(--space-xl);
+  box-shadow: 0 10px 40px rgb(0 0 0 / 10%);
 
   .header {
     display: flex;
     flex-direction: column;
     gap: var(--space-xs);
-
     width: 100%;
-
+    padding: var(--space-l) var(--space-xl) var(--space-m) var(--space-xl);
     text-align: left;
     border-block-end: 1px solid var(--color-border-color);
-    padding: var(--space-l) var(--space-xl) var(--space-m) var(--space-xl);
 
     .title {
       font-size: var(--font-size-xl);
@@ -37,39 +34,38 @@ $header-icon-size: 56px;
     }
 
     .subtitle {
-      font-size: var(--font-size-s);
-      color: var(--color-auth-text-light);
       margin: 0;
+      font-size: var(--font-size-s);
       line-height: 1.5;
+      color: var(--color-auth-text-light);
     }
   }
 
   .form {
-    padding-inline: var(--space-xl);
     width: 100%;
+    padding-inline: var(--space-xl);
   }
 
   .footer {
     width: 100%;
-
     text-align: center;
     border-block-start: 1px solid var(--color-border-color);
     padding-block: var(--space-m);
 
     .toggleButton {
+      padding: var(--space-s) var(--space-m);
+      font-size: var(--font-size-s);
+      font-weight: var(--font-weight-l);
+      color: var(--color-auth-primary);
       background: none;
       border: none;
-      color: var(--color-auth-primary);
-      font-size: var(--font-size-s);
-      cursor: pointer;
-      padding: var(--space-s) var(--space-m);
       border-radius: var(--border-radius-s);
       transition: var(--transition);
-      font-weight: var(--font-weight-l);
+      cursor: pointer;
 
       &:hover {
-        background-color: #f7fafc;
         color: var(--color-auth-primary-hover);
+        background-color: #f7fafc;
       }
     }
   }

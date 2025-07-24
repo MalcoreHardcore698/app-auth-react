@@ -1,7 +1,7 @@
 import React, { forwardRef, useId } from "react";
 import cn from "classnames";
 
-import { Loader } from "@/shared/ui/loader";
+import { Loader } from "@/shared/ui";
 
 import styles from "./styles.module.scss";
 

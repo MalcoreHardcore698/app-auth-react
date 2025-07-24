@@ -4,9 +4,9 @@
   @include flex-center;
 
   .spinner {
-    border-radius: var(--border-radius-full);
     border: var(--outline-width) solid transparent;
-    border-top: var(--outline-width) solid currentColor;
+    border-top: var(--outline-width) solid currentcolor;
+    border-radius: var(--border-radius-full);
     animation: spin 1s linear infinite;
   }
 

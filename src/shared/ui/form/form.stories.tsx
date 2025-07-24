@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useState } from "react";
 import { Form, useFormContext } from "./index";
 import { TextField } from "../text-field";
@@ -9,7 +9,8 @@ const FormField = ({
   ...props
 }: {
   name: string;
-  [key: string]: any;
+  rules?: import("./types").TValidationRules;
+  [key: string]: unknown;
 }) => {
   const { register, formState } = useFormContext();
   const field = register(name, props.rules);
@@ -41,7 +42,10 @@ type Story = StoryObj<typeof meta>;
 
 export const BasicForm: Story = {
   render: () => {
-    const [submittedData, setSubmittedData] = useState<any>(null);
+    const [submittedData, setSubmittedData] = useState<Record<
+      string,
+      unknown
+    > | null>(null);
 
     return (
       <div style={{ width: "400px" }}>
@@ -116,7 +120,10 @@ export const BasicForm: Story = {
 
 export const LoginForm: Story = {
   render: () => {
-    const [submittedData, setSubmittedData] = useState<any>(null);
+    const [submittedData, setSubmittedData] = useState<Record<
+      string,
+      unknown
+    > | null>(null);
 
     return (
       <div style={{ width: "350px" }}>
@@ -191,7 +198,10 @@ export const LoginForm: Story = {
 
 export const RegistrationForm: Story = {
   render: () => {
-    const [submittedData, setSubmittedData] = useState<any>(null);
+    const [submittedData, setSubmittedData] = useState<Record<
+      string,
+      unknown
+    > | null>(null);
 
     return (
       <div style={{ width: "400px" }}>
@@ -271,8 +281,10 @@ export const RegistrationForm: Story = {
               placeholder="Confirm password"
               rules={{
                 required: "Confirm password is required",
-                validate: (value: string, values: any) => {
-                  if (value !== values.password) {
+                validate: (value: unknown) => {
+                  const { control } = useFormContext();
+                  const formValues = control.getValues();
+                  if (value !== formValues.password) {
                     return "Passwords do not match";
                   }
                   return true;
@@ -307,7 +319,10 @@ export const RegistrationForm: Story = {
 
 export const ValidatedForm: Story = {
   render: () => {
-    const [submittedData, setSubmittedData] = useState<any>(null);
+    const [submittedData, setSubmittedData] = useState<Record<
+      string,
+      unknown
+    > | null>(null);
 
     return (
       <div style={{ width: "400px" }}>

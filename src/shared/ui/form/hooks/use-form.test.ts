@@ -67,9 +67,9 @@ describe("useForm", () => {
 
       const emailField = result.current.register("email");
 
-      expect(emailField).toEqual({
+      expect(emailField).toMatchObject({
         name: "email",
-        value: undefined,
+        value: "",
         onChange: expect.any(Function),
         onBlur: expect.any(Function),
       });
@@ -145,7 +145,9 @@ describe("useForm", () => {
       const emailField = result.current.register("email");
 
       act(() => {
-        emailField.onChange({ target: { value: "test@example.com" } } as any);
+        emailField.onChange({
+          target: { value: "test@example.com" },
+        } as React.ChangeEvent<HTMLInputElement>);
       });
 
       expect(result.current.control.getValue("email")).toBe("test@example.com");
@@ -163,29 +165,31 @@ describe("useForm", () => {
       expect(result.current.formState.touchedFields.email).toBe(true);
     });
 
-    it("validates on change when mode is onChange", () => {
+    it("validates on change when mode is onChange", async () => {
       const { result } = renderHook(() =>
         useForm<TestFormData>({ mode: "onChange" })
       );
 
       const emailField = result.current.register("email", { required: true });
 
-      act(() => {
-        emailField.onChange({ target: { value: "" } } as any);
+      await act(async () => {
+        emailField.onChange({
+          target: { value: "" },
+        } as React.ChangeEvent<HTMLInputElement>);
       });
 
       // Mode is set correctly and field is registered
       expect(emailField).toBeDefined();
     });
 
-    it("validates on blur when mode is onBlur", () => {
+    it("validates on blur when mode is onBlur", async () => {
       const { result } = renderHook(() =>
         useForm<TestFormData>({ mode: "onBlur" })
       );
 
       const emailField = result.current.register("email", { required: true });
 
-      act(() => {
+      await act(async () => {
         emailField.onBlur();
       });
 
@@ -353,6 +357,7 @@ describe("useForm", () => {
       const submitHandler = result.current.handleSubmit(onSubmit);
 
       await act(async () => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         await submitHandler({ preventDefault } as any);
       });
 

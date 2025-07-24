@@ -4,18 +4,18 @@
   @include flex-container(column);
 
   gap: var(--space-m);
-  max-width: 400px;
   width: 100%;
+  max-width: 400px;
 
   .field {
     width: 100%;
   }
 
   .error {
-    color: var(--color-danger);
-    font-size: var(--font-size-s);
     margin-top: var(--space-s);
+    font-size: var(--font-size-s);
     text-align: center;
+    color: var(--color-danger);
   }
 
   .submitButton {

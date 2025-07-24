@@ -40,7 +40,7 @@ export type TFormState<T extends TFieldValues = TFieldValues> = {
   isSubmitting: boolean;
 };
 
-export type TRegisterReturn<T = unknown> = {
+export type TRegisterReturn = {
   name: string;
   value: string | number | readonly string[] | undefined;
   onChange: <TEvent extends React.ChangeEvent<HTMLInputElement>>(
@@ -88,10 +88,7 @@ export interface IControllerProps<T extends TFieldValues = TFieldValues> {
 }
 
 export type TFormMethods<T extends TFieldValues = TFieldValues> = {
-  register: (
-    name: keyof T,
-    rules?: TValidationRules
-  ) => TRegisterReturn<T[keyof T]>;
+  register: (name: keyof T, rules?: TValidationRules) => TRegisterReturn;
   control: {
     setValue: (name: keyof T, value: T[keyof T]) => void;
     getValue: (name: keyof T) => T[keyof T];

@@ -41,9 +41,7 @@
 @mixin conditional-blur($blur-amount: 10px, $critical: false) {
   @if $critical {
     backdrop-filter: blur($blur-amount);
-  }
-
-  @else {
+  } @else {
     @media (min-width: var(--media-width-m)) {
       backdrop-filter: blur($blur-amount);
     }
@@ -65,18 +63,17 @@
 }
 
 @mixin reset-button {
-  padding: 0;
   margin: 0;
-
-  border: none;
+  padding: 0;
   background: none;
+  border: none;
   cursor: pointer;
 
   &:focus,
   &:hover,
   &:active {
-    outline: none;
     background: none;
+    outline: none;
   }
 
   &:hover:not(:disabled) {

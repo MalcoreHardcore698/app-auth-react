@@ -12,7 +12,7 @@ import { FORGOT_PASSWORD_VALIDATION_RULES } from "./constants";
 import styles from "./styles.module.scss";
 
 function ForgotPasswordForm() {
-  const { resetPassword, isLoading, error } = useAuth();
+  const { resetPassword, isLoading } = useAuth();
 
   const {
     register: registerField,

@@ -3,8 +3,8 @@
 .placeholder {
   @include flex-container(column, center, center);
 
-  text-align: center;
   padding: var(--space-xl) var(--space-m);
+  text-align: center;
 
   .icon {
     margin-bottom: var(--space-m);
@@ -14,16 +14,16 @@
 
   .title {
     margin: 0 0 var(--space-s) 0;
+    font-size: var(--font-size-l);
     font-weight: var(--font-weight-xl);
     color: var(--color-auth-text);
-    font-size: var(--font-size-l);
   }
 
   .description {
     margin: 0 0 var(--space-l) 0;
-    color: var(--color-auth-text-light);
-    line-height: 1.5;
     font-size: var(--font-size-m);
+    line-height: 1.5;
+    color: var(--color-auth-text-light);
   }
 
   .action {
@@ -35,18 +35,18 @@
       padding: var(--space-m) var(--space-s);
 
       .icon {
-        font-size: var(--size-s);
         margin-bottom: var(--space-s);
+        font-size: var(--size-s);
       }
 
       .title {
-        font-size: var(--font-size-m);
         margin-bottom: var(--space-xs);
+        font-size: var(--font-size-m);
       }
 
       .description {
-        font-size: var(--font-size-s);
         margin-bottom: var(--space-m);
+        font-size: var(--font-size-s);
       }
     }
 
@@ -54,18 +54,18 @@
       padding: var(--space-xl) var(--space-m);
 
       .icon {
-        font-size: var(--size-m);
         margin-bottom: var(--space-m);
+        font-size: var(--size-m);
       }
 
       .title {
-        font-size: var(--font-size-l);
         margin-bottom: var(--space-s);
+        font-size: var(--font-size-l);
       }
 
       .description {
-        font-size: var(--font-size-m);
         margin-bottom: var(--space-l);
+        font-size: var(--font-size-m);
       }
     }
 
@@ -73,18 +73,18 @@
       padding: var(--space-3xl) var(--space-l);
 
       .icon {
-        font-size: var(--size-l);
         margin-bottom: var(--space-l);
+        font-size: var(--size-l);
       }
 
       .title {
-        font-size: var(--font-size-xl);
         margin-bottom: var(--space-m);
+        font-size: var(--font-size-xl);
       }
 
       .description {
-        font-size: var(--font-size-l);
         margin-bottom: var(--space-xl);
+        font-size: var(--font-size-l);
       }
     }
   }

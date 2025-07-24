@@ -13,11 +13,11 @@ const PasswordField = forwardRef<HTMLInputElement, IPasswordFieldProps>(
   ({ onForgotPassword, ...props }, ref) => {
     const [showPassword, setShowPassword] = useState(false);
 
-    const handleTogglePassword = () => {
-      setShowPassword(!showPassword);
-    };
-
     const trailing = useMemo(() => {
+      const handleTogglePassword = () => {
+        setShowPassword(!showPassword);
+      };
+
       return (
         <Button
           size="small"
@@ -28,7 +28,7 @@ const PasswordField = forwardRef<HTMLInputElement, IPasswordFieldProps>(
           clear
         />
       );
-    }, [showPassword]);
+    }, [showPassword, setShowPassword]);
 
     const helperText = useMemo(() => {
       if (!onForgotPassword) return null;

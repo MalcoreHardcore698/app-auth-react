@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Button } from "./index";
 
 const meta: Meta<typeof Button> = {
@@ -115,7 +115,7 @@ export const FullWidth: Story = {
 export const WithLeftIcon: Story = {
   args: {
     children: "Button with left icon",
-    leftIcon: (
+    leading: (
       <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
         <path d="M8 1l-1.5 1.5L11 7H1v2h10l-4.5 4.5L8 15l7-7-7-7z" />
       </svg>
@@ -126,7 +126,7 @@ export const WithLeftIcon: Story = {
 export const WithRightIcon: Story = {
   args: {
     children: "Button with right icon",
-    rightIcon: (
+    trailing: (
       <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
         <path d="M8 1l-1.5 1.5L11 7H1v2h10l-4.5 4.5L8 15l7-7-7-7z" />
       </svg>

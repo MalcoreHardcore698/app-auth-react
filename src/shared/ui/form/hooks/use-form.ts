@@ -1,5 +1,4 @@
 import { useCallback, useRef, useState } from "react";
-import { toast } from "react-toastify";
 
 import type {
   IUseFormOptions,
@@ -134,7 +133,7 @@ function useForm<T extends TFieldValues = TFieldValues>(
   );
 
   const register = useCallback(
-    (name: keyof T, rules?: TValidationRules): TRegisterReturn<T[keyof T]> => {
+    (name: keyof T, rules?: TValidationRules): TRegisterReturn => {
       if (rules) {
         validationRules.current[name] = rules;
       }
@@ -271,7 +270,7 @@ function useForm<T extends TFieldValues = TFieldValues>(
         }
       };
     },
-    [values, trigger]
+    [values, trigger, setIsSubmitting, onError]
   );
 
   const watch = useCallback(
