@@ -1,0 +1,76 @@
+@use '@/shared/styles' as *;
+
+$header-icon-size: 56px;
+
+.root {
+  @include flex-center;
+
+  min-height: 100vh;
+  padding: var(--space-l);
+}
+
+.container {
+  @include flex-container(column);
+
+  width: 380px;
+
+  background: var(--color-auth-white);
+  border-radius: var(--border-radius-l);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  gap: var(--space-xl);
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+
+    width: 100%;
+
+    text-align: left;
+    border-block-end: 1px solid var(--color-border-color);
+    padding: var(--space-l) var(--space-xl) var(--space-m) var(--space-xl);
+
+    .title {
+      font-size: var(--font-size-xl);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-auth-text);
+    }
+
+    .subtitle {
+      font-size: var(--font-size-s);
+      color: var(--color-auth-text-light);
+      margin: 0;
+      line-height: 1.5;
+    }
+  }
+
+  .form {
+    padding-inline: var(--space-xl);
+    width: 100%;
+  }
+
+  .footer {
+    width: 100%;
+
+    text-align: center;
+    border-block-start: 1px solid var(--color-border-color);
+    padding-block: var(--space-m);
+
+    .toggleButton {
+      background: none;
+      border: none;
+      color: var(--color-auth-primary);
+      font-size: var(--font-size-s);
+      cursor: pointer;
+      padding: var(--space-s) var(--space-m);
+      border-radius: var(--border-radius-s);
+      transition: var(--transition);
+      font-weight: var(--font-weight-l);
+
+      &:hover {
+        background-color: #f7fafc;
+        color: var(--color-auth-primary-hover);
+      }
+    }
+  }
+}

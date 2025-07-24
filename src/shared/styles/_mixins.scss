@@ -1,0 +1,141 @@
+/// Flexbox container mixin
+/// @param {String} $direction - flex-direction value
+/// @param {String} $justify - justify-content value
+/// @param {String} $align - align-items value
+@mixin flex-container($direction: row, $justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin container($max-width: var(--media-width-xl)) {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 var(--space-m);
+}
+
+@mixin responsive-text($mobile-size, $desktop-size) {
+  font-size: $mobile-size;
+
+  @media (min-width: var(--media-width-m)) {
+    font-size: $desktop-size;
+  }
+}
+
+/// Conditional blur mixin - отключает блюр на мобильных для производительности
+/// @param {Number} $blur-amount - размер блюра в пикселях
+/// @param {Boolean} $critical - если true, блюр остается на всех устройствах (например, для шапки)
+@mixin conditional-blur($blur-amount: 10px, $critical: false) {
+  @if $critical {
+    backdrop-filter: blur($blur-amount);
+  }
+
+  @else {
+    @media (min-width: var(--media-width-m)) {
+      backdrop-filter: blur($blur-amount);
+    }
+  }
+}
+
+@mixin no-blur-mobile() {
+  @media (width <=calc(var(--media-width-m) - 1px)) {
+    backdrop-filter: none !important;
+    filter: none !important;
+  }
+}
+
+@mixin gpu-accelerate {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@mixin reset-button {
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &:focus,
+  &:hover,
+  &:active {
+    outline: none;
+    background: none;
+  }
+
+  &:hover:not(:disabled) {
+    background: none;
+    transform: translateY(0);
+  }
+}
+
+@mixin reset-mobile-interactions {
+  user-select: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    outline: none;
+  }
+}
+
+@mixin mobile-optimized-animation($animation) {
+  @media (min-width: var(--media-width-m)) {
+    animation: #{$animation};
+  }
+
+  @media (width <=calc(var(--media-width-m) - 1px)) {
+    animation: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+@mixin surface {
+  @include flex-container(column);
+
+  position: relative;
+  padding: var(--space-m);
+  background: var(--color-surface);
+  background: rgb(255 255 255 / 3%);
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-radius: var(--border-radius-m);
+  box-shadow: 0 8px 32px rgb(0 0 0 / 30%);
+  transform: translateZ(0);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  will-change: transform;
+  cursor: pointer;
+
+  @include conditional-blur(8px);
+
+  &:hover {
+    background: rgb(255 255 255 / 5%);
+    border-color: rgb(255 255 255 / 15%);
+    box-shadow: 0 12px 40px rgb(0 0 0 / 40%);
+    transform: translateY(-4px);
+  }
+}

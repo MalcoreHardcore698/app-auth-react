@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overscroll-behavior: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+  overscroll-behavior-y: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: var(--font-family);
+  font-size: 16pt;
+  color: var(--color-white);
+  background: var(--color-background);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overscroll-behavior: none;
+  overscroll-behavior-y: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.scroll-locked {
+    overflow: hidden;
+  }
+}
+
+input {
+  font-family: var(--font-family);
+  font-size: 15px;
+  color: var(--color-background);
+
+  /* Обработка автозаполнения */
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-animation-name: onAutoFillStart;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-duration: 0.1s;
+  }
+
+  /* Дополнительная обработка автозаполнения */
+  &:-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
+
+/* Анимация для обработки автозаполнения */
+@-webkit-keyframes onAutoFillStart {
+  from {
+    /**/
+  }
+
+  to {
+    /**/
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 64px;
+}
+
+::placeholder {
+  color: var(--color-text);
+  opacity: 1;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+:input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--color-background);
+}
+
+::input-placeholder {
+  /* Microsoft Edge */
+  color: var(--color-background);
+}
+
+h1 {
+  font-size: 64pt;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 40pt;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18pt;
+  font-weight: 600;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  font-family: var(--font-family);
+  text-decoration: none;
+  color: var(--color-link);
+}

@@ -1,0 +1,68 @@
+@use '@/shared/styles' as *;
+
+.loader {
+  @include flex-center;
+
+  .spinner {
+    border-radius: var(--border-radius-full);
+    border: var(--outline-width) solid transparent;
+    border-top: var(--outline-width) solid currentColor;
+    animation: spin 1s linear infinite;
+  }
+
+  &.size {
+    &__small {
+      .spinner {
+        width: var(--space-m);
+        height: var(--space-m);
+        border-width: 1.5px;
+      }
+    }
+
+    &__medium {
+      .spinner {
+        width: var(--size-xxs);
+        height: var(--size-xxs);
+        border-width: var(--outline-width);
+      }
+    }
+
+    &__large {
+      .spinner {
+        width: var(--size-xs);
+        height: var(--size-xs);
+        border-width: 3px;
+      }
+    }
+  }
+
+  &.color {
+    &__primary {
+      color: var(--color-auth-primary);
+    }
+
+    &__secondary {
+      color: var(--color-auth-text-light);
+    }
+
+    &__white {
+      color: var(--color-auth-white);
+    }
+  }
+}
+
+.fullScreenLoader {
+  @include flex-center;
+
+  min-height: 100vh;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,26 @@
+.toggleButton {
+  color: var(--color-auth-text-light);
+
+  &:hover {
+    color: var(--color-auth-text);
+  }
+}
+
+.forgotPasswordButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xxs);
+
+  min-height: auto;
+
+  margin: 0 0 0 var(--space-xs);
+  padding: 0;
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-l);
+  color: var(--color-auth-text-light);
+
+  &:hover {
+    color: var(--color-auth-text);
+  }
+}

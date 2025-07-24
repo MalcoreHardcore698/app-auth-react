@@ -1,0 +1,112 @@
+@use '@/shared/styles' as *;
+
+.root {
+  @include flex-center;
+
+  min-height: 100vh;
+  padding: var(--space-l);
+}
+
+.container {
+  @include flex-container(column);
+
+  width: 380px;
+
+  background: var(--color-auth-white);
+  border-radius: var(--border-radius-l);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  gap: var(--space-xl);
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+
+    width: 100%;
+
+    text-align: left;
+    border-block-end: 1px solid var(--color-border-color);
+    padding: var(--space-m) var(--space-xl);
+
+    .title {
+      @include text-truncate;
+
+      font-size: var(--font-size-xl);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-auth-text);
+    }
+
+    .subtitle {
+      font-size: var(--font-size-s);
+      color: var(--color-auth-text-light);
+      margin: 0;
+      line-height: 1.5;
+    }
+  }
+
+  .userInfo {
+    @include flex-container(column, center, center);
+
+    width: 100%;
+    gap: var(--space-l);
+
+    padding-inline: var(--space-xl);
+
+    .avatar {
+      width: var(--size-xl);
+      height: var(--size-xl);
+      background: var(--color-auth-background);
+      border-radius: var(--border-radius-full);
+
+      @include flex-center;
+
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+
+      .avatarText {
+        color: var(--color-auth-white);
+        font-size: var(--space-xl);
+        font-weight: var(--font-weight-xl);
+      }
+    }
+
+    .details {
+      @include flex-container(column);
+
+      gap: var(--space-s);
+      width: 100%;
+
+      .field {
+        @include flex-container(row, space-between, center);
+
+        width: 100%;
+
+        padding: var(--space-s) var(--space-m);
+        background: #f7fafc;
+        border-radius: var(--border-radius-m);
+        border: 1px solid #e2e8f0;
+
+        .label {
+          font-weight: var(--font-weight-l);
+          color: var(--color-auth-text-muted);
+          font-size: var(--font-size-s);
+        }
+
+        .value {
+          color: var(--color-auth-text);
+          font-weight: var(--font-weight-l);
+          font-size: var(--font-size-s);
+        }
+      }
+    }
+  }
+
+  .actions {
+    @include flex-center;
+
+    width: 100%;
+
+    text-align: center;
+    border-block-start: 1px solid var(--color-border-color);
+    padding-block: var(--space-m);
+  }
+}

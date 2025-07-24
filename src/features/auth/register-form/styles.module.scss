@@ -1,0 +1,24 @@
+@use '@/shared/styles' as *;
+
+.root {
+  @include flex-container(column);
+
+  gap: var(--space-m);
+  max-width: 400px;
+  width: 100%;
+
+  .field {
+    width: 100%;
+  }
+
+  .error {
+    color: var(--color-danger);
+    font-size: var(--font-size-s);
+    margin-top: var(--space-s);
+    text-align: center;
+  }
+
+  .submitButton {
+    margin-top: var(--space-s);
+  }
+}
