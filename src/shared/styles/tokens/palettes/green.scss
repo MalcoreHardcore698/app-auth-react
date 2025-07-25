@@ -1,0 +1,44 @@
+// Green Color Palette
+// Зеленая цветовая палитра
+
+[data-palette="green"] {
+  /* ================================== */
+
+  /* BRAND COLORS - Зеленые цвета бренда */
+
+  /* ================================== */
+  --palette-brand-50: #f0fdf4;
+  --palette-brand-100: #dcfce7;
+  --palette-brand-200: #bbf7d0;
+  --palette-brand-300: #86efac;
+  --palette-brand-400: #4ade80;
+  --palette-brand-500: #22c55e;
+
+  /* Primary brand color */
+  --palette-brand-600: #16a34a;
+
+  /* Hover state */
+  --palette-brand-700: #15803d;
+
+  /* Active state */
+  --palette-brand-800: #166534;
+  --palette-brand-900: #14532d;
+
+  /* ================================== */
+
+  /* ACCENT COLORS - Акцентные цвета */
+
+  /* ================================== */
+  --palette-accent-50: #ecfdf5;
+  --palette-accent-100: #d1fae5;
+  --palette-accent-200: #a7f3d0;
+  --palette-accent-300: #6ee7b7;
+  --palette-accent-400: #34d399;
+  --palette-accent-500: #10b981;
+
+  /* Secondary accent color */
+  --palette-accent-600: #059669;
+  --palette-accent-700: #047857;
+  --palette-accent-800: #065f46;
+  --palette-accent-900: #064e3b;
+}

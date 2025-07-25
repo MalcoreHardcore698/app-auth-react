@@ -1,0 +1,44 @@
+// Purple Color Palette
+// Фиолетовая цветовая палитра
+
+[data-palette="purple"] {
+  /* ================================== */
+
+  /* BRAND COLORS - Фиолетовые цвета бренда */
+
+  /* ================================== */
+  --palette-brand-50: #faf5ff;
+  --palette-brand-100: #f3e8ff;
+  --palette-brand-200: #e9d5ff;
+  --palette-brand-300: #d8b4fe;
+  --palette-brand-400: #c084fc;
+  --palette-brand-500: #a855f7;
+
+  /* Primary brand color */
+  --palette-brand-600: #9333ea;
+
+  /* Hover state */
+  --palette-brand-700: #7c3aed;
+
+  /* Active state */
+  --palette-brand-800: #6b21a8;
+  --palette-brand-900: #581c87;
+
+  /* ================================== */
+
+  /* ACCENT COLORS - Акцентные цвета */
+
+  /* ================================== */
+  --palette-accent-50: #f5f3ff;
+  --palette-accent-100: #ede9fe;
+  --palette-accent-200: #ddd6fe;
+  --palette-accent-300: #c4b5fd;
+  --palette-accent-400: #a78bfa;
+  --palette-accent-500: #8b5cf6;
+
+  /* Secondary accent color */
+  --palette-accent-600: #7c3aed;
+  --palette-accent-700: #6d28d9;
+  --palette-accent-800: #5b21b6;
+  --palette-accent-900: #4c1d95;
+}

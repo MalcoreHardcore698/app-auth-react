@@ -1,0 +1,43 @@
+// Dark Theme
+// Темная тема - инвертированные цвета для темного режима
+
+[data-theme="dark"] {
+  /* Background Colors - Цвета фонов */
+  --color-background-primary: var(--palette-neutral-900);
+  --color-background-secondary: var(--palette-neutral-800);
+  --color-background-tertiary: var(--palette-neutral-700);
+  --color-background-app: var(--palette-neutral-900);
+  --color-background-overlay: rgb(0 0 0 / 70%);
+
+  /* Surface Colors - Цвета поверхностей */
+  --color-surface-primary: var(--palette-neutral-800);
+  --color-surface-secondary: var(--palette-neutral-700);
+  --color-surface-elevated: var(--palette-neutral-750);
+  --color-surface-overlay: rgb(0 0 0 / 95%);
+
+  /* Text Colors - Цвета текста */
+  --color-text-primary: var(--palette-neutral-50);
+  --color-text-secondary: var(--palette-neutral-300);
+  --color-text-tertiary: var(--palette-neutral-400);
+  --color-text-muted: var(--palette-neutral-500);
+  --color-text-inverse: var(--palette-neutral-900);
+  --color-text-on-brand: var(--palette-neutral-0);
+
+  /* Interactive Colors - Цвета интерактивных элементов */
+  --color-interactive-secondary: var(--palette-neutral-700);
+  --color-interactive-secondary-hover: var(--palette-neutral-600);
+
+  /* Border Colors - Цвета границ */
+  --color-border-primary: var(--palette-neutral-700);
+  --color-border-secondary: var(--palette-neutral-800);
+
+  /* Status Colors - Адаптация для темной темы */
+  --color-success-background: rgb(16 185 129 / 10%);
+  --color-warning-background: rgb(245 158 11 / 10%);
+  --color-error-background: rgb(239 68 68 / 10%);
+  --color-info-background: rgb(59 130 246 / 10%);
+
+  /* Brand Colors - Более яркие в темной теме */
+  --color-brand-secondary: var(--palette-brand-200);
+  --color-brand-tertiary: var(--palette-brand-100);
+}

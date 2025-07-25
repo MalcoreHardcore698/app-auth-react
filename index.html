@@ -5,6 +5,41 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
+    <script>
+      // Apply saved theme immediately to prevent flash
+      (function() {
+        try {
+          const html = document.documentElement;
+          
+          // Set default light theme first
+          html.setAttribute('data-theme', 'light');
+          html.setAttribute('data-palette', 'default');
+          
+          const savedTheme = localStorage.getItem('app-theme');
+          if (savedTheme) {
+            const theme = JSON.parse(savedTheme);
+            
+            // Determine actual theme mode
+            let resolvedMode = theme.mode;
+            if (theme.mode === 'system') {
+              resolvedMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            
+            // Apply saved theme attributes
+            html.setAttribute('data-theme', resolvedMode);
+            html.setAttribute('data-palette', theme.palette || 'default');
+          }
+          
+          // Debug log
+          console.log('Theme applied:', html.getAttribute('data-theme'), html.getAttribute('data-palette'));
+        } catch (e) {
+          console.error('Theme script error:', e);
+          // Fallback to light theme
+          document.documentElement.setAttribute('data-theme', 'light');
+          document.documentElement.setAttribute('data-palette', 'default');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

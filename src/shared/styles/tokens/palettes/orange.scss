@@ -1,0 +1,44 @@
+// Orange Color Palette
+// Оранжевая цветовая палитра
+
+[data-palette="orange"] {
+  /* ================================== */
+
+  /* BRAND COLORS - Оранжевые цвета бренда */
+
+  /* ================================== */
+  --palette-brand-50: #fff7ed;
+  --palette-brand-100: #ffedd5;
+  --palette-brand-200: #fed7aa;
+  --palette-brand-300: #fdba74;
+  --palette-brand-400: #fb923c;
+  --palette-brand-500: #f97316;
+
+  /* Primary brand color */
+  --palette-brand-600: #ea580c;
+
+  /* Hover state */
+  --palette-brand-700: #c2410c;
+
+  /* Active state */
+  --palette-brand-800: #9a3412;
+  --palette-brand-900: #7c2d12;
+
+  /* ================================== */
+
+  /* ACCENT COLORS - Акцентные цвета */
+
+  /* ================================== */
+  --palette-accent-50: #fef3c7;
+  --palette-accent-100: #fde68a;
+  --palette-accent-200: #fcd34d;
+  --palette-accent-300: #fbbf24;
+  --palette-accent-400: #f59e0b;
+  --palette-accent-500: #d97706;
+
+  /* Secondary accent color */
+  --palette-accent-600: #b45309;
+  --palette-accent-700: #92400e;
+  --palette-accent-800: #78350f;
+  --palette-accent-900: #451a03;
+}

@@ -14,9 +14,9 @@ $header-icon-size: 56px;
 
   gap: var(--space-xl);
   width: 380px;
-  background: var(--color-auth-white);
-  border-radius: var(--border-radius-l);
-  box-shadow: 0 10px 40px rgb(0 0 0 / 10%);
+  background: var(--color-surface-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
 
   .header {
     display: flex;
@@ -25,19 +25,19 @@ $header-icon-size: 56px;
     width: 100%;
     padding: var(--space-l) var(--space-xl) var(--space-m) var(--space-xl);
     text-align: left;
-    border-block-end: 1px solid var(--color-border-color);
+    border-block-end: 1px solid var(--color-border-primary);
 
     .title {
       font-size: var(--font-size-xl);
       font-weight: var(--font-weight-bold);
-      color: var(--color-auth-text);
+      color: var(--color-text-primary);
     }
 
     .subtitle {
       margin: 0;
-      font-size: var(--font-size-s);
+      font-size: var(--font-size-sm);
       line-height: 1.5;
-      color: var(--color-auth-text-light);
+      color: var(--color-text-secondary);
     }
   }
 
@@ -49,23 +49,23 @@ $header-icon-size: 56px;
   .footer {
     width: 100%;
     text-align: center;
-    border-block-start: 1px solid var(--color-border-color);
+    border-block-start: 1px solid var(--color-border-primary);
     padding-block: var(--space-m);
 
     .toggleButton {
-      padding: var(--space-s) var(--space-m);
-      font-size: var(--font-size-s);
-      font-weight: var(--font-weight-l);
-      color: var(--color-auth-primary);
+      padding: var(--space-sm) var(--space-md);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-medium);
+      color: var(--color-brand-primary);
       background: none;
       border: none;
-      border-radius: var(--border-radius-s);
-      transition: var(--transition);
+      border-radius: var(--radius-md);
+      transition: var(--transition-normal);
       cursor: pointer;
 
       &:hover {
-        color: var(--color-auth-primary-hover);
-        background-color: #f7fafc;
+        color: var(--color-brand-primary-hover);
+        background-color: var(--color-background-secondary);
       }
     }
   }

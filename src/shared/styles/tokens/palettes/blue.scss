@@ -1,0 +1,44 @@
+// Blue Color Palette
+// Синяя цветовая палитра
+
+[data-palette="blue"] {
+  /* ================================== */
+
+  /* BRAND COLORS - Синие цвета бренда */
+
+  /* ================================== */
+  --palette-brand-50: #eff6ff;
+  --palette-brand-100: #dbeafe;
+  --palette-brand-200: #bfdbfe;
+  --palette-brand-300: #93c5fd;
+  --palette-brand-400: #60a5fa;
+  --palette-brand-500: #3b82f6;
+
+  /* Primary brand color */
+  --palette-brand-600: #2563eb;
+
+  /* Hover state */
+  --palette-brand-700: #1d4ed8;
+
+  /* Active state */
+  --palette-brand-800: #1e40af;
+  --palette-brand-900: #1e3a8a;
+
+  /* ================================== */
+
+  /* ACCENT COLORS - Акцентные цвета */
+
+  /* ================================== */
+  --palette-accent-50: #f0f9ff;
+  --palette-accent-100: #e0f2fe;
+  --palette-accent-200: #bae6fd;
+  --palette-accent-300: #7dd3fc;
+  --palette-accent-400: #38bdf8;
+  --palette-accent-500: #0ea5e9;
+
+  /* Secondary accent color */
+  --palette-accent-600: #0284c7;
+  --palette-accent-700: #0369a1;
+  --palette-accent-800: #075985;
+  --palette-accent-900: #0c4a6e;
+}

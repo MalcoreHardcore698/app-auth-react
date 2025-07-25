@@ -30,10 +30,73 @@
 
 .variant {
   &__primary {
-    color: var(--color-white);
-    background-color: var(--color-primary);
+    color: var(--color-text-on-brand);
+    background-color: var(--color-brand-primary);
 
     &:hover:not(:disabled) {
+      background-color: var(--color-brand-primary-hover);
+      transform: translateY(-1px);
+    }
+
+    &:active:not(:disabled) {
+      background-color: var(--color-brand-primary-active);
+      transform: translateY(0);
+    }
+  }
+
+  &__secondary {
+    color: var(--color-text-primary);
+    background-color: var(--color-background-secondary);
+
+    &:hover:not(:disabled) {
+      background-color: var(--color-background-tertiary);
+      transform: translateY(-1px);
+    }
+
+    &:active:not(:disabled) {
+      background-color: var(--color-background-tertiary);
+      transform: translateY(0);
+    }
+  }
+
+  &__outline {
+    color: var(--color-brand-primary);
+    background-color: transparent;
+    border: 1px solid var(--color-brand-primary);
+
+    &:hover:not(:disabled) {
+      color: var(--color-text-on-brand);
+      background-color: var(--color-brand-primary);
+      transform: translateY(-1px);
+    }
+
+    &:active:not(:disabled) {
+      background-color: var(--color-brand-primary-active);
+      transform: translateY(0);
+    }
+  }
+
+  &__ghost {
+    color: var(--color-text-primary);
+    background-color: transparent;
+
+    &:hover:not(:disabled) {
+      background-color: var(--color-background-secondary);
+      transform: translateY(-1px);
+    }
+
+    &:active:not(:disabled) {
+      background-color: var(--color-background-tertiary);
+      transform: translateY(0);
+    }
+  }
+
+  &__danger {
+    color: var(--color-text-on-brand);
+    background-color: var(--color-error);
+
+    &:hover:not(:disabled) {
+      background-color: var(--color-error);
       transform: translateY(-1px);
       filter: brightness(0.9);
     }
@@ -41,68 +104,6 @@
     &:active:not(:disabled) {
       transform: translateY(0);
       filter: brightness(0.8);
-    }
-  }
-
-  &__secondary {
-    color: var(--color-white);
-    background-color: var(--color-secondary);
-
-    &:hover:not(:disabled) {
-      transform: translateY(-1px);
-      filter: brightness(1.1);
-    }
-
-    &:active:not(:disabled) {
-      transform: translateY(0);
-      filter: brightness(0.9);
-    }
-  }
-
-  &__outline {
-    color: var(--color-primary);
-    background-color: transparent;
-    border: 1px solid var(--color-primary);
-
-    &:hover:not(:disabled) {
-      color: var(--color-black);
-      background-color: var(--color-primary);
-      transform: translateY(-1px);
-    }
-
-    &:active:not(:disabled) {
-      transform: translateY(0);
-      filter: brightness(0.9);
-    }
-  }
-
-  &__ghost {
-    color: var(--color-text);
-    background-color: transparent;
-
-    &:hover:not(:disabled) {
-      background-color: var(--color-gray-100);
-      transform: translateY(-1px);
-    }
-
-    &:active:not(:disabled) {
-      background-color: var(--color-gray-200);
-      transform: translateY(0);
-    }
-  }
-
-  &__danger {
-    color: var(--color-white);
-    background-color: var(--color-danger);
-
-    &:hover:not(:disabled) {
-      background-color: var(--color-danger-hover);
-      transform: translateY(-1px);
-    }
-
-    &:active:not(:disabled) {
-      background-color: var(--color-danger-active);
-      transform: translateY(0);
     }
   }
 }

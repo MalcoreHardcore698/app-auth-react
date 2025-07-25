@@ -1,0 +1,18 @@
+// Design Tokens System
+// Главный файл системы дизайн-токенов
+
+// 1. Сначала загружаем дефолтную палитру
+@use './palettes/default';
+
+// 2. Затем все цветовые палитры
+@use './palettes/blue';
+@use './palettes/orange';
+@use './palettes/green';
+@use './palettes/purple';
+
+// 3. Затем базовые семантические токены
+@use './base';
+
+// 4. И наконец темы (они переопределяют семантические токены)
+@use './themes/light';
+@use './themes/dark';

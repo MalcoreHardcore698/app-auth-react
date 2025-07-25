@@ -1,0 +1,127 @@
+// Default Color Palette
+// Базовая цветовая палитра на основе существующих цветов приложения
+
+:root {
+  /* ================================== */
+
+  /* NEUTRAL COLORS - Нейтральные цвета */
+
+  /* ================================== */
+  --palette-neutral-0: #fff;
+  --palette-neutral-25: #fbfbfb;
+  --palette-neutral-50: #f8fafc;
+  --palette-neutral-100: #f1f5f9;
+  --palette-neutral-200: #e2e8f0;
+  --palette-neutral-300: #cbd5e1;
+  --palette-neutral-400: #94a3b8;
+  --palette-neutral-500: #64748b;
+  --palette-neutral-600: #475569;
+  --palette-neutral-700: #334155;
+  --palette-neutral-750: #293548;
+  --palette-neutral-800: #1e293b;
+  --palette-neutral-900: #0f172a;
+
+  /* ================================== */
+
+  /* BRAND COLORS - Основные цвета бренда */
+
+  /* ================================== */
+  --palette-brand-50: #e0e7ff;
+  --palette-brand-100: #c7d2fe;
+  --palette-brand-200: #a5b4fc;
+  --palette-brand-300: #818cf8;
+  --palette-brand-400: #6366f1;
+  --palette-brand-500: #6366f1;
+
+  /* Primary brand color */
+  --palette-brand-600: #4f46e5;
+
+  /* Hover state */
+  --palette-brand-700: #4338ca;
+
+  /* Active state */
+  --palette-brand-800: #3730a3;
+  --palette-brand-900: #312e81;
+
+  /* ================================== */
+
+  /* ACCENT COLORS - Акцентные цвета */
+
+  /* ================================== */
+  --palette-accent-50: #cffafe;
+  --palette-accent-100: #a5f3fc;
+  --palette-accent-200: #67e8f9;
+  --palette-accent-300: #22d3ee;
+  --palette-accent-400: #06b6d4;
+  --palette-accent-500: #06b6d4;
+
+  /* Secondary brand color */
+  --palette-accent-600: #0891b2;
+  --palette-accent-700: #0e7490;
+  --palette-accent-800: #155e75;
+  --palette-accent-900: #164e63;
+
+  /* ================================== */
+
+  /* SUCCESS COLORS - Цвета успеха */
+
+  /* ================================== */
+  --palette-success-50: #d1fae5;
+  --palette-success-100: #a7f3d0;
+  --palette-success-200: #6ee7b7;
+  --palette-success-300: #34d399;
+  --palette-success-400: #10b981;
+  --palette-success-500: #10b981;
+  --palette-success-600: #059669;
+  --palette-success-700: #047857;
+  --palette-success-800: #065f46;
+  --palette-success-900: #064e3b;
+
+  /* ================================== */
+
+  /* WARNING COLORS - Цвета предупреждения */
+
+  /* ================================== */
+  --palette-warning-50: #fef3c7;
+  --palette-warning-100: #fde68a;
+  --palette-warning-200: #fcd34d;
+  --palette-warning-300: #fbbf24;
+  --palette-warning-400: #f59e0b;
+  --palette-warning-500: #f59e0b;
+  --palette-warning-600: #d97706;
+  --palette-warning-700: #b45309;
+  --palette-warning-800: #92400e;
+  --palette-warning-900: #78350f;
+
+  /* ================================== */
+
+  /* ERROR COLORS - Цвета ошибки */
+
+  /* ================================== */
+  --palette-error-50: #fee2e2;
+  --palette-error-100: #fecaca;
+  --palette-error-200: #fca5a5;
+  --palette-error-300: #f87171;
+  --palette-error-400: #ef4444;
+  --palette-error-500: #ef4444;
+  --palette-error-600: #dc2626;
+  --palette-error-700: #b91c1c;
+  --palette-error-800: #991b1b;
+  --palette-error-900: #7f1d1d;
+
+  /* ================================== */
+
+  /* INFO COLORS - Информационные цвета */
+
+  /* ================================== */
+  --palette-info-50: #dbeafe;
+  --palette-info-100: #bfdbfe;
+  --palette-info-200: #93c5fd;
+  --palette-info-300: #60a5fa;
+  --palette-info-400: #3b82f6;
+  --palette-info-500: #3b82f6;
+  --palette-info-600: #2563eb;
+  --palette-info-700: #1d4ed8;
+  --palette-info-800: #1e40af;
+  --palette-info-900: #1e3a8a;
+}

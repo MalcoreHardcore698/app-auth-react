@@ -1,0 +1,34 @@
+// Theme Toggle Styles
+// Стили для компонента переключения темы
+
+.themeToggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-md);
+  transition: var(--transition-fast);
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  transition: var(--transition-fast);
+
+  .themeToggle:hover & {
+    transform: scale(1.1);
+  }
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+}

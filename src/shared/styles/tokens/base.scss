@@ -1,0 +1,194 @@
+// Base semantic design tokens
+// Эти токены определяют семантику использования цветов и других значений
+
+:root {
+  /* ================================== */
+
+  /* SEMANTIC COLOR TOKENS */
+
+  /* ================================== */
+
+  /* Background Colors - Цвета фонов */
+  --color-background-primary: var(--palette-neutral-50);
+  --color-background-secondary: var(--palette-neutral-100);
+  --color-background-tertiary: var(--palette-neutral-200);
+  --color-background-app: var(--palette-neutral-25);
+  --color-background-overlay: rgb(0 0 0 / 50%);
+
+  /* Surface Colors - Цвета поверхностей */
+  --color-surface-primary: var(--palette-neutral-0);
+  --color-surface-secondary: var(--palette-neutral-50);
+  --color-surface-elevated: var(--palette-neutral-0);
+  --color-surface-overlay: rgb(255 255 255 / 95%);
+
+  /* Text Colors - Цвета текста */
+  --color-text-primary: var(--palette-neutral-900);
+  --color-text-secondary: var(--palette-neutral-600);
+  --color-text-tertiary: var(--palette-neutral-500);
+  --color-text-muted: var(--palette-neutral-400);
+  --color-text-inverse: var(--palette-neutral-0);
+  --color-text-on-brand: var(--palette-neutral-0);
+
+  /* Brand Colors - Основные цвета бренда */
+  --color-brand-primary: var(--palette-brand-500);
+  --color-brand-primary-hover: var(--palette-brand-600);
+  --color-brand-primary-active: var(--palette-brand-700);
+  --color-brand-secondary: var(--palette-brand-100);
+  --color-brand-tertiary: var(--palette-brand-50);
+
+  /* Accent Colors - Акцентные цвета */
+  --color-accent-primary: var(--palette-accent-500);
+  --color-accent-primary-hover: var(--palette-accent-600);
+  --color-accent-secondary: var(--palette-accent-100);
+
+  /* Interactive Colors - Цвета интерактивных элементов */
+  --color-interactive-primary: var(--palette-brand-500);
+  --color-interactive-primary-hover: var(--palette-brand-600);
+  --color-interactive-primary-active: var(--palette-brand-700);
+  --color-interactive-secondary: var(--palette-neutral-200);
+  --color-interactive-secondary-hover: var(--palette-neutral-300);
+
+  /* Link Colors - Цвета ссылок */
+  --color-link: var(--palette-brand-500);
+  --color-link-hover: var(--palette-brand-600);
+  --color-link-visited: var(--palette-brand-700);
+
+  /* Border Colors - Цвета границ */
+  --color-border-primary: var(--palette-neutral-200);
+  --color-border-secondary: var(--palette-neutral-100);
+  --color-border-focus: var(--palette-brand-500);
+  --color-border-error: var(--palette-error-500);
+
+  /* Status Colors - Цвета состояний */
+  --color-success: var(--palette-success-500);
+  --color-success-background: var(--palette-success-50);
+  --color-success-border: var(--palette-success-200);
+  --color-warning: var(--palette-warning-500);
+  --color-warning-background: var(--palette-warning-50);
+  --color-warning-border: var(--palette-warning-200);
+  --color-error: var(--palette-error-500);
+  --color-error-background: var(--palette-error-50);
+  --color-error-border: var(--palette-error-200);
+  --color-info: var(--palette-info-500);
+  --color-info-background: var(--palette-info-50);
+  --color-info-border: var(--palette-info-200);
+
+  /* ================================== */
+
+  /* NON-COLOR SEMANTIC TOKENS */
+
+  /* ================================== */
+
+  /* Typography - Типографика */
+  --font-family-primary: 'Inter', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, sans-serif;
+  --font-family-secondary: 'Inter', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
+
+  /* Font Sizes - Размеры шрифтов */
+  --font-size-xs: 0.75rem;
+
+  /* 12px */
+  --font-size-sm: 0.875rem;
+
+  /* 14px */
+  --font-size-base: 1rem;
+
+  /* 16px */
+  --font-size-lg: 1.125rem;
+
+  /* 18px */
+  --font-size-xl: 1.25rem;
+
+  /* 20px */
+  --font-size-2xl: 1.5rem;
+
+  /* 24px */
+  --font-size-3xl: 1.875rem;
+
+  /* 30px */
+  --font-size-4xl: 2.25rem;
+
+  /* 36px */
+  --font-size-5xl: 3rem;
+
+  /* 48px */
+
+  /* Font Weights - Веса шрифтов */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Spacing - Отступы */
+  --space-xs: 0.25rem;
+
+  /* 4px */
+  --space-sm: 0.5rem;
+
+  /* 8px */
+  --space-md: 1rem;
+
+  /* 16px */
+  --space-lg: 1.5rem;
+
+  /* 24px */
+  --space-xl: 2rem;
+
+  /* 32px */
+  --space-2xl: 3rem;
+
+  /* 48px */
+  --space-3xl: 4rem;
+
+  /* 64px */
+  --space-4xl: 6rem;
+
+  /* 96px */
+
+  /* Border Radius - Радиусы границ */
+  --radius-none: 0;
+  --radius-sm: 0.25rem;
+
+  /* 4px */
+  --radius-md: 0.5rem;
+
+  /* 8px */
+  --radius-lg: 0.75rem;
+
+  /* 12px */
+  --radius-xl: 1rem;
+
+  /* 16px */
+  --radius-2xl: 1.5rem;
+
+  /* 24px */
+  --radius-full: 9999px;
+
+  /* Shadows - Тени */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 5%);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 10%);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 8px 10px -6px rgb(0 0 0 / 10%);
+
+  /* Transitions - Переходы */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-Index - Уровни */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+
+  /* Opacity - Прозрачность */
+  --opacity-disabled: 0.5;
+  --opacity-loading: 0.8;
+  --opacity-hover: 0.9;
+}

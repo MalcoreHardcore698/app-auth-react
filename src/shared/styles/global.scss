@@ -22,10 +22,10 @@ body {
 
 body {
   overflow-x: hidden;
-  font-family: var(--font-family);
+  font-family: var(--font-family-primary);
   font-size: 16pt;
-  color: var(--color-white);
-  background: var(--color-background);
+  color: var(--color-text-primary);
+  transition: background-color 0.2s ease;
   scrollbar-width: none;
   -ms-overflow-style: none;
   overscroll-behavior: none;
@@ -40,10 +40,24 @@ body {
   }
 }
 
+/* Theme-specific background colors */
+html[data-theme="dark"] body {
+  background-color: var(--color-background-app, #0f172a);
+}
+
+html[data-theme="light"] body {
+  background-color: var(--color-background-app, #fbfbfb);
+}
+
+/* Default fallback for when no theme is set */
+html:not([data-theme]) body {
+  background-color: #fbfbfb;
+}
+
 input {
-  font-family: var(--font-family);
+  font-family: var(--font-family-primary);
   font-size: 15px;
-  color: var(--color-background);
+  color: var(--color-text-primary);
 
   /* Обработка автозаполнения */
   &:-webkit-autofill,
@@ -81,7 +95,7 @@ main {
 }
 
 ::placeholder {
-  color: var(--color-text);
+  color: var(--color-text-muted);
   opacity: 1;
 }
 
@@ -91,12 +105,12 @@ main {
 
 :input-placeholder {
   /* Internet Explorer 10-11 */
-  color: var(--color-background);
+  color: var(--color-text-muted);
 }
 
 ::input-placeholder {
   /* Microsoft Edge */
-  color: var(--color-background);
+  color: var(--color-text-muted);
 }
 
 h1 {
@@ -119,7 +133,7 @@ ul {
 }
 
 a {
-  font-family: var(--font-family);
+  font-family: var(--font-family-primary);
   text-decoration: none;
   color: var(--color-link);
 }
