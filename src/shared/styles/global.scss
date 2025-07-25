@@ -103,15 +103,13 @@ a {
 }
 
 .Toastify__toast {
-  background: var(--color-background);
-  border-radius: var(--border-radius-s);
-
-  padding-inline-end: 30px;
-  padding-block: 18px;
-
   font-family: var(--font-family);
   font-size: 14px;
   color: var(--color-auth-text-light);
+  background: var(--color-background);
+  border-radius: var(--border-radius-s);
+  padding-inline-end: 30px;
+  padding-block: 18px;
 }
 
 .Toastify__close-button {

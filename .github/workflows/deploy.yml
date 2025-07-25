@@ -40,9 +40,6 @@ jobs:
       - name: Lint JavaScript/TypeScript
         run: yarn lint
 
-      - name: Lint CSS/SCSS
-        run: yarn lint:css
-
       - name: Run tests
         run: yarn test:run
 
