@@ -1,10 +1,10 @@
 import type { ComponentType } from "react";
 
 export enum ERoutePath {
-  ROOT = "/app-auth-react",
-  AUTH = "/app-auth-react/auth",
-  WELCOME = "/app-auth-react/welcome",
-  NOT_FOUND = "/app-auth-react/*",
+  ROOT = "/",
+  AUTH = "/auth",
+  WELCOME = "/welcome",
+  NOT_FOUND = "/*",
 }
 
 export interface IRoute {

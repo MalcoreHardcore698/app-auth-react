@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import { BASE_PATH } from "@/shared/constants";
+
 import ProtectedRoute from "./app-route";
 import routes from "./routes";
-import { BASE_PATH } from "@/shared/constants";
 
 function Router() {
   return (
