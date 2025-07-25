@@ -5,7 +5,7 @@ import { Loader } from "./index";
 
 vi.mock("./styles.module.scss", () => ({
   default: {
-    loader: "loader",
+    root: "root",
     spinner: "spinner",
     size__small: "size-small",
     size__medium: "size-medium",
@@ -26,7 +26,7 @@ describe("Loader", () => {
   it("applies default size and color classes", () => {
     const { container } = render(<Loader />);
     const loader = container.firstChild as HTMLElement;
-    expect(loader).toHaveClass("loader", "size-medium", "color-primary");
+    expect(loader).toHaveClass("root", "size-medium", "color-primary");
   });
 
   it("applies custom size classes", () => {
@@ -62,7 +62,7 @@ describe("Loader", () => {
 
     it("contains regular loader inside", () => {
       const { container } = render(<Loader.FullScreen />);
-      const loader = container.querySelector(".loader");
+      const loader = container.querySelector(".root");
       expect(loader).toBeInTheDocument();
     });
   });

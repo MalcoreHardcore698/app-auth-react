@@ -13,15 +13,15 @@ function Loader({
   color = "primary",
   className,
 }: ILoaderProps) {
-  const loaderClassName = cn(
-    styles.loader,
+  const rootClassName = cn(
+    styles.root,
     styles[`size__${size}`],
     styles[`color__${color}`],
     className
   );
 
   return (
-    <div className={loaderClassName}>
+    <div className={rootClassName}>
       <div className={styles.spinner} />
     </div>
   );

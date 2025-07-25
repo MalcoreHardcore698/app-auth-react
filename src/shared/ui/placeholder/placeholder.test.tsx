@@ -5,7 +5,7 @@ import { Placeholder } from "./index";
 
 vi.mock("./styles.module.scss", () => ({
   default: {
-    placeholder: "placeholder",
+    root: "root",
     icon: "icon",
     title: "title",
     description: "description",
@@ -37,11 +37,7 @@ describe("Placeholder", () => {
   it("applies default variant and size classes", () => {
     const { container } = render(<Placeholder />);
     const placeholder = container.firstChild as HTMLElement;
-    expect(placeholder).toHaveClass(
-      "placeholder",
-      "variant-empty",
-      "size-medium"
-    );
+    expect(placeholder).toHaveClass("root", "variant-empty", "size-medium");
   });
 
   describe("Variants", () => {
