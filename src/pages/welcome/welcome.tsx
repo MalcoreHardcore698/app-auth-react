@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 import { useAuth } from "@/services/auth";
 import { LogoutButton } from "@/features/auth/logout-button";
-import { Loader, Placeholder } from "@/shared/ui";
+import { Loader, Placeholder, Helmet } from "@/shared/ui";
 
 import styles from "./styles.module.scss";
 
@@ -36,6 +36,13 @@ function WelcomePage() {
 
   return (
     <div className={styles.root}>
+      <Helmet
+        type="website"
+        title="Welcome"
+        description="Welcome to your secure dashboard. Manage your account and access your personalized content."
+        keywords="dashboard, welcome, user profile, account management"
+      />
+
       <motion.div {...rootMotionProps} className={styles.container}>
         <div className={styles.header}>
           <h1 className={styles.title}>Welcome, {user.name}!</h1>

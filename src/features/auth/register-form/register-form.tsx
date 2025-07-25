@@ -80,7 +80,11 @@ function RegisterForm() {
         </div>
 
         <div className={styles.field}>
-          <PasswordField {...passwordField} error={errors.password?.message} />
+          <PasswordField
+            {...passwordField}
+            error={errors.password?.message}
+            autoComplete="new-password"
+          />
         </div>
 
         <Button

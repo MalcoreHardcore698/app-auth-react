@@ -1,8 +1,9 @@
 import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Button } from "./index";
+
 import type { IButtonProps } from "./button";
+import { Button } from "./index";
 
 vi.mock("./styles.module.scss", () => ({
   default: {
@@ -23,14 +24,12 @@ vi.mock("./styles.module.scss", () => ({
 }));
 
 describe("Button", () => {
-  // Basic functionality - only essential tests
   it("renders and displays content", () => {
     render(<Button>Click me</Button>);
     expect(screen.getByRole("button")).toBeInTheDocument();
     expect(screen.getByText("Click me")).toBeInTheDocument();
   });
 
-  // Variants - core API
   describe("Variants", () => {
     const variants: Array<IButtonProps["variant"]> = [
       "primary",
@@ -53,7 +52,6 @@ describe("Button", () => {
     });
   });
 
-  // Sizes - core API
   describe("Sizes", () => {
     const sizes: Array<IButtonProps["size"]> = ["small", "medium", "large"];
 
@@ -63,7 +61,6 @@ describe("Button", () => {
     });
   });
 
-  // Loading state - critical functionality
   it("handles loading state correctly", () => {
     render(<Button loading>Loading</Button>);
     const button = screen.getByRole("button");
@@ -73,13 +70,11 @@ describe("Button", () => {
     expect(button.querySelector(".button-spinner")).toBeInTheDocument();
   });
 
-  // Disabled state
   it("handles disabled state", () => {
     render(<Button disabled>Disabled</Button>);
     expect(screen.getByRole("button")).toBeDisabled();
   });
 
-  // Icons - essential API
   it("renders with icons", () => {
     render(
       <Button
@@ -94,13 +89,11 @@ describe("Button", () => {
     expect(screen.getByTestId("right")).toBeInTheDocument();
   });
 
-  // Full width
   it("applies fullWidth class", () => {
     render(<Button fullWidth>Test</Button>);
     expect(screen.getByRole("button")).toHaveClass("button-full-width");
   });
 
-  // Event handling - critical functionality
   it("handles click events", async () => {
     const handleClick = vi.fn();
     const user = userEvent.setup();
@@ -139,7 +132,6 @@ describe("Button", () => {
     expect(handleClick).not.toHaveBeenCalled();
   });
 
-  // Custom props
   it("applies custom className", () => {
     render(<Button className="custom">Test</Button>);
     expect(screen.getByRole("button")).toHaveClass("custom");

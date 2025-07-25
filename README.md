@@ -87,7 +87,7 @@ The project includes a comprehensive design system with:
 ## 🚦 Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
+- Node.js 18+
 - Yarn or npm
 
 ### Installation
@@ -224,6 +224,26 @@ The app includes pre-seeded mock users for development. Check `src/shared/api/st
 - Accessibility compliant
 - Consistent design tokens
 - Reusable and composable
+
+## 🚀 Deployment and CI/CD
+
+### GitHub Pages
+The application is automatically deployed to GitHub Pages on push to the main branch.
+
+### Local Development
+```bash
+# Development
+yarn dev
+
+# Production build
+yarn build
+
+# Preview local build
+yarn preview
+
+# Preview with production settings
+yarn preview:prod
+```
 
 ## 📄 License
 

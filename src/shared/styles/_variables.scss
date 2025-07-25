@@ -39,7 +39,7 @@
   --color-white: #fff;
   --color-black: #0f172a;
 
-  /* Auth App Colors - Современная градиентная палитра */
+  /* Auth App Colors */
   --color-auth-primary: #6366f1;
   --color-auth-primary-hover: #4f46e5;
   --color-auth-secondary: #8b5cf6;
@@ -49,7 +49,7 @@
   --color-auth-white: #fff;
   --color-auth-background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
 
-  /* Status Colors - Современная палитра */
+  /* Status Colors */
   --color-success: #10b981;
   --color-success-hover: #059669;
   --color-success-active: #047857;
@@ -67,13 +67,13 @@
   --color-info-active: #1d4ed8;
   --color-info-light: #dbeafe;
 
-  /* UI Colors - Обновленная серая палитра */
+  /* UI Colors */
   --color-border: #e2e8f0;
   --color-border-light: #f1f5f9;
   --color-border-dark: #cbd5e1;
   --color-border-focus: #6366f1;
 
-  /* Gray Scale - Slate цвета для лучшего контраста */
+  /* Gray Scale */
   --color-gray-50: #f8fafc;
   --color-gray-100: #f1f5f9;
   --color-gray-200: #e2e8f0;
@@ -85,11 +85,11 @@
   --color-gray-800: #1e293b;
   --color-gray-900: #0f172a;
 
-  /* Appearance - Современные значения */
+  /* Appearance */
   --border: 1px solid var(--color-border);
   --border-focus: 2px solid var(--color-border-focus);
 
-  /* Border Radius - 8px базовая единица */
+  /* Border Radius */
   --border-radius-none: 0;
   --border-radius-sm: 4px;
   --border-radius-base: 8px;
@@ -99,13 +99,13 @@
   --border-radius-2xl: 32px;
   --border-radius-full: 9999px;
 
-  /* Legacy support - используют новые значения */
+  /* Legacy support */
   --border-radius-s: var(--border-radius-sm);
   --border-radius-m: var(--border-radius-base);
   --border-radius-l: var(--border-radius-lg);
   --border-radius-xxl: var(--border-radius-2xl);
 
-  /* Shadows - Современные тени */
+  /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 5%);
   --shadow-base: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px -1px rgb(0 0 0 / 10%);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
@@ -121,7 +121,7 @@
   --font-family-heading: 'Inter', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, sans-serif;
   --font-family-mono: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
 
-  /* Font Sizes - Типографическая шкала */
+  /* Font Sizes */
   --font-size-xs: 0.75rem;
 
   /* 12px */
@@ -175,7 +175,7 @@
   --font-weight-xl: var(--font-weight-semibold);
   --font-weight-xxl: var(--font-weight-extrabold);
 
-  /* Spacing - 4px базовая единица */
+  /* Spacing */
   --space-0: 0;
   --space-0-5: 0.125rem;
 
@@ -243,7 +243,7 @@
   --space-3xl: var(--space-24);
   --space-4xl: var(--space-32);
 
-  /* Component Sizes - Более логичная шкала */
+  /* Component Sizes */
   --size-3: 0.75rem;
 
   /* 12px */
@@ -295,11 +295,11 @@
   --size-l: var(--size-16);
   --size-xl: var(--size-24);
 
-  /* Avatar sizes - Более разумные размеры */
+  /* Avatar sizes */
   --avatar-size-desktop: 400px;
   --avatar-size-mobile: 280px;
 
-  /* Media Breakpoints - Стандартные размеры */
+  /* Media Breakpoints */
   --media-space-s: var(--space-4);
   --media-space-m: 5%;
   --media-space-l: 8%;
@@ -310,14 +310,12 @@
   --media-width-xl: 1280px;
   --media-width-2xl: 1536px;
 
-  /* Transitions - Оптимизированные переходы */
+  /* Transitions */
   --transition-none: none;
   --transition-fast: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-  /* Legacy transition support */
 
   /* Component States */
   --opacity-disabled: 0.5;

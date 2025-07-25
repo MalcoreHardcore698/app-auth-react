@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { LoginForm } from "@/features/auth/login-form";
 import { RegisterForm } from "@/features/auth/register-form";
 import { ForgotPasswordForm } from "@/features/auth/forgot-password-form";
+import { Helmet, Button } from "@/shared/ui";
 
 import styles from "./styles.module.scss";
 
@@ -87,6 +88,14 @@ function AuthPage() {
 
   return (
     <div className={styles.root}>
+      <Helmet
+        type="website"
+        title={title}
+        description={`${subtitle}. Secure authentication for React applications.`}
+        keywords={`${mode}, authentication, login, register, password reset, security`}
+        noIndex={true}
+      />
+
       <motion.div key={mode} {...rootMotionProps} className={styles.container}>
         <header className={styles.header}>
           <motion.h1 {...opacityMotionProps} className={styles.title}>
@@ -101,13 +110,14 @@ function AuthPage() {
         <div className={styles.form}>{renderForm()}</div>
 
         <footer className={styles.footer}>
-          <button
+          <Button
+            type="button"
+            variant="ghost"
             className={styles.toggleButton}
             onClick={toggleMode}
-            type="button"
           >
             {footerButton}
-          </button>
+          </Button>
         </footer>
       </motion.div>
     </div>

@@ -1,0 +1,7 @@
+@use '@/shared/styles' as *;
+
+.root {
+  @include flex-center;
+
+  min-height: 100vh;
+}

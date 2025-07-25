@@ -4,6 +4,7 @@ export enum ERoutePath {
   ROOT = "/",
   AUTH = "/auth",
   WELCOME = "/welcome",
+  NOT_FOUND = "*",
 }
 
 export interface IRoute {

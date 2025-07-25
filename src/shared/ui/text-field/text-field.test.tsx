@@ -1,6 +1,7 @@
 import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+
 import { TextField } from "./index";
 
 vi.mock("./styles.module.scss", () => ({
@@ -31,17 +32,16 @@ vi.mock("../loader", () => ({
 }));
 
 describe("TextField", () => {
-  // Basic functionality
   it("renders input with basic props", () => {
     render(<TextField placeholder="Enter text" defaultValue="test" />);
 
     const input = screen.getByRole("textbox");
+
     expect(input).toBeInTheDocument();
     expect(input).toHaveAttribute("placeholder", "Enter text");
     expect(input).toHaveValue("test");
   });
 
-  // Label functionality
   it("renders with label and associates correctly", () => {
     render(<TextField label="Email" required />);
 
@@ -49,11 +49,10 @@ describe("TextField", () => {
     const label = screen.getByText("Email");
 
     expect(label).toBeInTheDocument();
-    expect(screen.getByText("*")).toBeInTheDocument(); // required indicator
+    expect(screen.getByText("*")).toBeInTheDocument();
     expect(input).toHaveAttribute("aria-required", "true");
   });
 
-  // Variants and sizes - core API
   describe("Variants & Sizes", () => {
     it("applies fullWidth class", () => {
       const { container } = render(<TextField fullWidth />);
@@ -61,25 +60,24 @@ describe("TextField", () => {
     });
   });
 
-  // Error state - critical functionality
   it("handles error state correctly", () => {
     render(<TextField error="This field is required" helperText="Help text" />);
 
     const input = screen.getByRole("textbox");
+
     expect(input).toHaveAttribute("aria-invalid", "true");
     expect(screen.getByText("This field is required")).toBeInTheDocument();
     expect(screen.getByRole("alert")).toBeInTheDocument();
+
     // Error should take priority over helper text
     expect(screen.queryByText("Help text")).not.toBeInTheDocument();
   });
 
-  // Helper text
   it("displays helper text when no error", () => {
     render(<TextField helperText="This is helpful" />);
     expect(screen.getByText("This is helpful")).toBeInTheDocument();
   });
 
-  // Icons - essential API
   it("renders with icons", () => {
     render(
       <TextField
@@ -92,7 +90,6 @@ describe("TextField", () => {
     expect(screen.getByTestId("trailing-icon")).toBeInTheDocument();
   });
 
-  // Loading state
   it("handles loading state", () => {
     render(<TextField loading />);
 
@@ -101,7 +98,6 @@ describe("TextField", () => {
     expect(screen.getByTestId("loader")).toBeInTheDocument();
   });
 
-  // Disabled state
   it("handles disabled state", () => {
     render(<TextField disabled />);
 
@@ -112,10 +108,10 @@ describe("TextField", () => {
     expect(container.firstChild).toHaveClass("textfield-is-disabled");
   });
 
-  // Event handling - critical functionality
   it("handles user input", async () => {
     const handleChange = vi.fn();
     const handleBlur = vi.fn();
+
     const user = userEvent.setup();
 
     render(<TextField onChange={handleChange} onBlur={handleBlur} />);
@@ -129,13 +125,11 @@ describe("TextField", () => {
     expect(handleBlur).toHaveBeenCalled();
   });
 
-  // Different input types
   it("supports different input types", () => {
     render(<TextField type="email" />);
     expect(screen.getByRole("textbox")).toHaveAttribute("type", "email");
   });
 
-  // Custom props
   it("applies custom className and forwards props", () => {
     render(<TextField className="custom" name="test-field" />);
 

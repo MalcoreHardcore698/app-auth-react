@@ -45,30 +45,8 @@ input {
   font-size: 15px;
   color: var(--color-background);
 
-  /* Обработка автозаполнения */
-  &:-webkit-autofill,
-  &:-webkit-autofill:hover,
-  &:-webkit-autofill:focus,
-  &:-webkit-autofill:active {
-    animation-name: onAutoFillStart;
-    animation-duration: 0.1s;
-    animation-fill-mode: both;
-  }
-
-  /* Дополнительная обработка автозаполнения */
   &:-webkit-autofill {
     transition: background-color 5000s ease-in-out 0s;
-  }
-}
-
-/* Анимация для обработки автозаполнения */
-@keyframes onAutoFillStart {
-  from {
-    /* autofill start */
-  }
-
-  to {
-    /* autofill end */
   }
 }
 
@@ -122,4 +100,25 @@ a {
   font-family: var(--font-family);
   text-decoration: none;
   color: var(--color-link);
+}
+
+.Toastify__toast {
+  background: var(--color-background);
+  border-radius: var(--border-radius-s);
+
+  padding-inline-end: 30px;
+  padding-block: 18px;
+
+  font-family: var(--font-family);
+  font-size: 14px;
+  color: var(--color-auth-text-light);
+}
+
+.Toastify__close-button {
+  top: calc(var(--space-s) + var(--space-xs));
+  right: calc(var(--space-s) + var(--space-xs));
+}
+
+.Toastify__toast-icon {
+  margin-inline-end: 18px;
 }

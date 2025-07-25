@@ -15,10 +15,22 @@
   align-items: center;
 }
 
-@mixin text-truncate {
-  overflow: hidden;
+@mixin text-truncate($lines: 1) {
+  display: block;
+
   text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow: hidden;
+
+  @if $lines >1 {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    white-space: initial;
+  }
+
+  @else {
+    white-space: nowrap;
+  }
 }
 
 @mixin container($max-width: var(--media-width-xl)) {
@@ -35,13 +47,15 @@
   }
 }
 
-/// Conditional blur mixin - отключает блюр на мобильных для производительности
-/// @param {Number} $blur-amount - размер блюра в пикселях
-/// @param {Boolean} $critical - если true, блюр остается на всех устройствах (например, для шапки)
+/// Conditional blur mixin - disables blur on mobile for performance
+/// @param {Number} $blur-amount - blur amount in pixels
+/// @param {Boolean} $critical - if true, blur remains on all devices (e.g., for header)
 @mixin conditional-blur($blur-amount: 10px, $critical: false) {
   @if $critical {
     backdrop-filter: blur($blur-amount);
-  } @else {
+  }
+
+  @else {
     @media (min-width: var(--media-width-m)) {
       backdrop-filter: blur($blur-amount);
     }

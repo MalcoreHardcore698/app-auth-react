@@ -53,19 +53,15 @@ $header-icon-size: 56px;
     padding-block: var(--space-m);
 
     .toggleButton {
+      margin: 0 auto;
       padding: var(--space-s) var(--space-m);
+
       font-size: var(--font-size-s);
       font-weight: var(--font-weight-l);
       color: var(--color-auth-primary);
-      background: none;
-      border: none;
-      border-radius: var(--border-radius-s);
-      transition: var(--transition);
-      cursor: pointer;
 
       &:hover {
         color: var(--color-auth-primary-hover);
-        background-color: #f7fafc;
       }
     }
   }
