@@ -2,6 +2,8 @@
 
 A modern React authentication demo application built with TypeScript, Vite, and a comprehensive design system.
 
+## Demo - [malcorehardcore698.github.io/app-auth-react](https://malcorehardcore698.github.io/app-auth-react/)
+
 ## 🛠 Tech Stack
 
 ### Core
